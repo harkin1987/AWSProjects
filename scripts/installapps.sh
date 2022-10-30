@@ -1,4 +1,4 @@
 #!/bin/bash
-yum install -y tomcat haproxy httpd
-yum install -y epel-release
-yum install -y pygpgme yum-utils
+yum install tomcat haproxy httpd -y
+sudo amazon-linux-extras install epel -y
+yum install pygpgme yum-utils -y
