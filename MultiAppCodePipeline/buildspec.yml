@@ -1,0 +1,11 @@
+version: 0.1
+phases:
+  build:
+    commands:
+      - echo Build started on `date`
+      - zip -qr build-output.zip *
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files: build-output.zip
