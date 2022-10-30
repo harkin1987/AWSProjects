@@ -1,16 +1,15 @@
-version: 0.0
+version: 0.1
 os: linux
 hooks:
   BeforeInstall:
-    - location: scripts/install_dependencies.sh
+    - location: scripts/installapps.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: scripts/start_server.sh
-    - location: scripts/create_test_db.sh
+    - location: scripts/startprocesses.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: scripts/stop_server.sh
+    - location: scripts/stopprocesses.sh
       timeout: 300
       runas: root
